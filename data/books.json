@@ -18,10 +18,10 @@
       },
       {
         "id": "3",
-        "name": "The Land Before Time",
-        "author": "Alan Moore",
+        "name": "Anna Karenina",
+        "author": "Leo Tolstoy",
         "genre": "Fantasy",
-        "price": "12.99",
+        "price": "15.99",
         "publisher": "Houghton Mifflin"
       }
     ]
