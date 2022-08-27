@@ -49,6 +49,7 @@ router.get("/:id", (req, res) => {
  * Description: Create new user
  * Access: Public
  * Parameters: none
+ * Data : id, name, surname, email, subscriptionType, subscriptionDate
  */
 
 router.post("/", (req, res) => {
@@ -81,6 +82,7 @@ router.post("/", (req, res) => {
  * Description: Updating user data
  * Access: Public
  * Parameters: id
+ * Data : id, name, surname, email, subscriptionType, subscriptionDate
  */
 
 router.put("/:id", (req, res) => {

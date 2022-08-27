@@ -22,11 +22,7 @@ DELETE: Delete a user by id ✅
 
 ## /users/subscription-details/{id}
 
-GET: Get user subscription details ✅
-
-    1. Expiration of subscription ??
-    2. Days left for expiration
-    3. Fine if any
+GET: Get user subscription details ✅ 1. Expiration of subscription ?? 2. Days left for expiration 3. Fine if any
 
 ## /books
 
