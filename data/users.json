@@ -6,10 +6,10 @@
         "surname": "Doe",
         "email": "user@email.com",
         "issuedBook": "1",
-        "issuedDate": "01/07/2022",
-        "returnDate": "01/10/2022",
+        "issuedDate": "07/01/2022",
+        "returnDate": "09/01/2022",
         "subscriptionType": "Basic",
-        "subscriptionDate": "01/07/2022"
+        "subscriptionDate": "07/01/2022"
       },
       {
         "id": "2",
@@ -17,10 +17,10 @@
         "surname": "Smith",
         "email": "user@email.com",
         "issuedBook": "2",
-        "issuedDate": "01/07/2022",
-        "returnDate": "01/10/2022",
+        "issuedDate": "05/25/2022",
+        "returnDate": "07/25/2022",
         "subscriptionType": "Basic",
-        "subscriptionDate": "03/01/2022"
+        "subscriptionDate": "05/25/2022"
       },
       {
         "id": "3",
@@ -28,8 +28,8 @@
         "surname": "Davis",
         "email": "user@email.com",
         "issuedBook": "3",
-        "issuedDate": "01/07/2022",
-        "returnDate": "01/10/2021",
+        "issuedDate": "01/01/2022",
+        "returnDate": "03/02/2021",
         "subscriptionType": "Premium",
         "subscriptionDate": "01/01/2022"
       },
