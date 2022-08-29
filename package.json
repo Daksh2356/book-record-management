@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/aditya12gusain/book-record-management-10567#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
