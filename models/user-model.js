@@ -21,15 +21,19 @@ const userSchema = new Schema(
       ref: "Book",
       required: false,
     },
+    issuedDate: {
+      type: String,
+      required: false,
+    },
     returnDate: {
       type: String,
       required: false,
     },
-    SubscriptionType: {
+    subscriptionType: {
       type: String,
       required: true,
     },
-    SubscriptionDate: {
+    subscriptionDate: {
       type: String,
       required: true,
     },

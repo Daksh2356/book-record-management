@@ -1,6 +1,6 @@
 const express = require("express");
 
-// Importing books (JSON data)
+// Importing books and users (JSON data)
 const { books } = require("../data/books.json");
 const { users } = require("../data/users.json");
 
@@ -9,6 +9,8 @@ const {
   getAllBooks,
   getSingleBookById,
   getAllIssuedBooks,
+  addNewBook,
+  updateBookById,
 } = require("../controllers/book-controller");
 
 const router = express.Router();
@@ -51,43 +53,7 @@ router.get("/issued/by-user", getAllIssuedBooks);
  * Data : author, name, genre, price, publisher, id
  */
 
-router.post("/", (req, res) => {
-  // const { data } = req.body;
-  const { id, author, name, genre, price, publisher } = req.body;
-
-  // if (!data) {
-  //   return res.status(404).json({
-  //     success: false,
-  //     message: "No data provided",
-  //   });
-  // }
-
-  const book = books.find((each) => each.id === id);
-
-  if (book) {
-    return res.status(404).json({
-      success: false,
-      message: "Book already exists with this id",
-    });
-  }
-
-  // const allBooks = [...books, data];
-
-  books.push({
-    id,
-    author,
-    name,
-    genre,
-    price,
-    publisher,
-  });
-
-  return res.status(201).json({
-    success: true,
-    // data: allBooks,
-    data: books,
-  });
-});
+router.post("/", addNewBook);
 
 /**
  * Route: /books/:id
@@ -98,30 +64,7 @@ router.post("/", (req, res) => {
  * Data : author, name, genre, price, publisher, id
  */
 
-router.put("/:id", (req, res) => {
-  const { id } = req.params;
-  const { data } = req.body;
-
-  const book = books.find((each) => each.id === id);
-
-  if (!book)
-    return res.status(404).json({
-      success: false,
-      message: "Book not found with this particular id ",
-    });
-
-  const updateData = books.map((each) => {
-    if (each.id === id) {
-      return { ...each, ...data };
-    }
-    return each;
-  });
-
-  return res.status(200).json({
-    success: true,
-    data: updateData,
-  });
-});
+router.put("/:id", updateBookById);
 
 // default export
 module.exports = router;
