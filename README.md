@@ -10,37 +10,41 @@ https://documenter.getpostman.com/view/23019698/VUr1FsRo
 
 ## /users
 
-GET: Get all list of users ✅
+GET: Get all list of users ✅ <br>
 POST: Create a new user ✅
 
 ## /users/{id}
 
-GET: Get a user by id ✅
-PUT: Update a user by id ✅
-DELETE: Delete a user by id ✅
-(check if he/she has an issued book) ( Is there any fine to be paid)
+GET: Get a user by id ✅ <br>
+PUT: Update a user by id ✅ <br>
+DELETE: Delete a user by id ✅ <br>
+<span>(check if he/she has an issued book) ( Is there any fine to be paid) </span>
 
 ## /users/subscription-details/{id}
 
-GET: Get user subscription details ✅ 1. Expiration of subscription ?? 2. Days left for expiration 3. Fine if any
+GET: Get user subscription details ✅
+<ul>
+<li>Expiration of subscription</li>
+<li>Days left for expiration</li>
+<li> Fine if any</li>
+</ul>
 
 ## /books
-
-GET: Get all books ✅
+GET: Get all books ✅ <br>
 POST: Create/Add a new book ✅
 
 ## /books/{id}
 
-GET: Get a book by id ✅
+GET: Get a book by id ✅ <br>
 PUT: Update a book by id ✅
 
 ## /books/issued/by-user
 
-GET: Get all issued books ✅
+GET: Get all issued books ✅ <br>
 
 ## /books/issued/withFine
 
-GET: Get all issued books with a fine on them ✅
+GET: Get all issued books with a fine on them ✅ <br>
 
 ## Subscription Types
 
