@@ -161,5 +161,57 @@ router.put("/:id", (req, res) => {
   });
 });
 
+/**
+ * Route: /books/issued/withFine
+ * Method: GET
+ * Description: Gell all issued books with fine
+ * Access: Public
+ * Parameters: none
+ */
+
+router.get("/issued/withFine", (req, res) => {
+  const usersWithIssuedBooksWithFine = users.filter((each) => {
+    if (each.issuedBook) return each;
+  });
+
+  const issuedBookswithFine = [];
+
+  usersWithIssuedBooksWithFine.forEach((each) => {
+    const book = books.find((book) => book.id === each.issuedBook);
+
+    const getDateInDays = (data = "") => {
+      let date;
+      if (data === "") {
+        // current date
+        date = new Date();
+      } else {
+        // getting date on basis of data variable
+        date = new Date(data);
+      }
+
+      let days = Math.floor(date / (1000 * 60 * 60 * 24));
+      return days;
+    };
+
+    let returnDate = getDateInDays(each.returnDate);
+    let currentDate = getDateInDays();
+    if (returnDate < currentDate) {
+      issuedBookswithFine.push(book);
+    }
+  });
+
+  if (issuedBookswithFine.length === 0) {
+    return res.status(404).json({
+      success: false,
+      message: "No issued books with fine were found!!",
+    });
+  }
+
+  return res.status(200).json({
+    success: true,
+    data: issuedBookswithFine,
+  });
+});
+
 // default export
 module.exports = router;
