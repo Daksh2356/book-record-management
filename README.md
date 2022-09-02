@@ -40,7 +40,7 @@ GET: Get all issued books ✅
 
 ## /books/issued/withFine
 
-GET: Get all issued books with a fine on them
+GET: Get all issued books with a fine on them ✅
 
 ## Subscription Types
 
