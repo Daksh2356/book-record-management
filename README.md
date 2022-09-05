@@ -23,6 +23,7 @@ DELETE: Delete a user by id ✅ <br>
 ## /users/subscription-details/{id}
 
 GET: Get user subscription details ✅
+
 <ul>
 <li>Expiration of subscription</li>
 <li>Days left for expiration</li>
@@ -30,6 +31,7 @@ GET: Get user subscription details ✅
 </ul>
 
 ## /books
+
 GET: Get all books ✅ <br>
 POST: Create/Add a new book ✅
 
@@ -37,6 +39,10 @@ POST: Create/Add a new book ✅
 
 GET: Get a book by id ✅ <br>
 PUT: Update a book by id ✅
+
+## /books/getbook/name/{name}
+
+GET: Get a book by name ✅
 
 ## /books/issued/by-user
 
