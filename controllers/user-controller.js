@@ -1,5 +1,4 @@
 const { BookModel, UserModel } = require("../models");
-const userModel = require("../models/user-model");
 
 exports.getAllUsers = async (req, res) => {
   const users = await UserModel.find();
@@ -82,7 +81,7 @@ exports.deleteUser = async (req, res) => {
 
   return res
     .status(202)
-    .json({ success: true, data: "Deleted the user successfully" });
+    .json({ success: true, message: "Deleted the user successfully" });
 };
 
 exports.getSubscriptionDetailsById = async (req, res) => {

@@ -34,6 +34,26 @@ exports.getSingleBookById = async (req, res) => {
   });
 };
 
+// Additional route cpontroller
+exports.getSingleBookByName = async (req, res) => {
+  const { name } = req.params;
+  const book = await BookModel.findOne({
+    name: name,
+  });
+
+  if (!book) {
+    return res.status(404).json({
+      success: false,
+      message: "No book found",
+    });
+  }
+
+  res.status(200).json({
+    success: true,
+    data: book,
+  });
+};
+
 exports.getAllIssuedBooks = async (req, res) => {
   const users = await UserModel.find({
     issuedBook: { $exists: true },

@@ -11,6 +11,7 @@ const {
   getAllIssuedBooks,
   addNewBook,
   updateBookById,
+  getSingleBookByName,
 } = require("../controllers/book-controller");
 
 const router = express.Router();
@@ -34,6 +35,16 @@ router.get("/", getAllBooks);
  */
 
 router.get("/:id", getSingleBookById);
+
+// Additional route
+/**
+ * Route: /books/getbook/name/:name * Method: GET
+ * Description: Get book by name
+ * Access: Public
+ * Parameters: name
+ */
+
+router.get("/getbook/name/:name", getSingleBookByName);
 
 /**
  * Route: /books/issued/by-user
